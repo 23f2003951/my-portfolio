@@ -1,6 +1,6 @@
 name: Compliance Check and Test
 
-This workflow is triggered on every push to 'main' or via manual run.
+
 on:
 push:
 branches: [ "main" ]
