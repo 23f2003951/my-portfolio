@@ -1,4 +1,12 @@
+on:
+push:
+branches: [ "main" ]
+workflow_dispatch:
 
+jobs:
+validation:
+# Use the latest Ubuntu runner environment
+runs-on: ubuntu-latest
 jobs:
   test:
     steps:
