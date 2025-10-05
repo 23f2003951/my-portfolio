@@ -1,27 +1,12 @@
 name: Compliance Check and Test
 
 
-on:
-push:
-branches: [ "main" ]
-workflow_dispatch:
+on: push
+
+
 
 jobs:
-validation:
-# Use the latest Ubuntu runner environment
-runs-on: ubuntu-latest
-
-steps:
-  # Step 1: Check out the code from the repository
-  - name: Checkout Repository Code
-    uses: actions/checkout@v4
-    
-  # Step 2: MANDATORY step with the required email address in the name
-  - name: Compliance Step 23f2003951@ds.study.iitm.ac.in
-    run: |
-      echo "The action step named 'Compliance Step 23f2003951@ds.study.iitm.ac.in' executed successfully."
-      echo "GitHub Actions run started at $(date)"
-      
-  # Step 3: Demonstrate another task
-  - name: Run basic health check
-    run: echo "Repository is ready for action."
+  test:
+    steps:
+      - name: 23f2003951@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
