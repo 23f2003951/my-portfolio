@@ -1,0 +1,25 @@
+{
+  // Sets the name of the container as required
+  "name": "ga2-20ae13",
+  
+  // Use the universal image as a solid base for devcontainers
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+
+  // Install the required Python feature
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+
+  // Install the required VS Code extensions
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astral-sh.uv",
+        "ms-python.python"
+      ]
+    }
+  },
+
+  // Run the postCreateCommand to prime dependencies via uv
+  "postCreateCommand": "uv pip install fastapi"
+}
